@@ -1,9 +1,8 @@
 import random
 
-# relating choices to emojis using dictionary
 # taking tuple cuz we dont need to modify choices
-choice = ('r','p','s')
-emojis={'r':'🪨','p':'📃','s':'✂️'}
+emojis = {'r':'🪨','p':'📃','s':'✂️'}
+choice = tuple(emojis.keys()) #basically this will make a tuple of the key values of the emoji tuple.
 
 #taking the choice of the user and letting computer choose 
 def get_user_choice ():
@@ -32,14 +31,15 @@ def det_winner(user_choice, comp_choice):
 
 #refactoring code and making it modular
 def play_game():
-    user_choice = get_user_choice()
-    comp_choice = random.choice(choice)
-    
-    disp_user_choice(user_choice,comp_choice)
-    det_winner(user_choice,comp_choice)
-    
-    cont = input ('Wanna play more? (y/n): ')
-    if cont == 'n':
-        print ('thanks for playing!')
+    while True :
+        user_choice = get_user_choice()
+        comp_choice = random.choice(choice)
+        disp_user_choice(user_choice,comp_choice)
+        det_winner(user_choice,comp_choice)
+        cont = input ('Wanna play more? (y/n): ')
+        if cont == 'n':
+            print ('thanks for playing!')
+            break
+        
 
 play_game()
