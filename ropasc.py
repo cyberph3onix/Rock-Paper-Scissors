@@ -11,6 +11,7 @@ while True:
     comp_choice = random.choice(choice)
     if user_choice not in choice:
         print ('invalid response')
+        continue
 
     #showing what the user chose and what the computer chose
     print (f'User chose: {emojis[user_choice]}')
