@@ -1,2 +1,2 @@
-# Rock-Paper-Scissors
- simple rock paper and scissors game using python
+# Rock-Paper-Scissors-Game
+ I have created this simple rock paper scissors using python. The purpose of this is to showcase my progress.
